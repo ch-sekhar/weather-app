@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    commands:
+       - echo Running npm install
+       - npm install # run npm install to install all dependencies
+       - git clone https://github.com/ch-sekhar/weather-app.git
+       - cd weather-app
+       - sudo npm install -g nodemon
+artifacts:
+  files:
+     - '**/*' #copy all build files to S3 location
